@@ -14,8 +14,6 @@ public class GamblingSimulator {
     static int totalLossAmount = 0;
     static int daysWon = 0;
     static int daysLost = 0;
-    static int luckiestDay;
-    static int unLuckiestDay;
 
     public static void playGame() {
         int result = (int)Math.floor(Math.random()*2)+1;
@@ -46,8 +44,6 @@ public class GamblingSimulator {
                 lossAmount = 0;
                 while (winAmount != DAILY_LIMIT && lossAmount != DAILY_LIMIT) {
                     playGame();
-                    System.out.println(totalWinAmount);
-                    System.out.println(totalLossAmount);
                 }
                 if (winAmount > lossAmount){
                     daysWon ++;
